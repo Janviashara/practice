@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div
+        class="flex items-center justify-between p-5 bg-white z-20 top-0 fixed w-full start-0 border-b-2"
+      >
+        <img src="./images/Foodieland..png" alt="Foodieland" class="w-32" />
+
+        <div class="flex items-center md:hidden">
+          <button id="icon" class="text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-12">
+          <a href="#" class="text-xl hover:text-blue-600">Home</a>
+          <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
+          <a href="#" class="text-xl hover:text-blue-600">Blog</a>
+          <a href="#" class="text-xl hover:text-blue-600">Contact</a>
+          <a href="#" class="text-xl hover:text-blue-600">About Us</a>
+        </nav>
+
+        <div class="flex items-center space-x-4 hidden md:block">
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-600"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-400"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-pink-500"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div id="mobile" class="md:hidden hidden bg-green-100 py-4">
+        <nav class="flex flex-col items-center space-y-4">
+          <a href="#" class="text-xl hover:text-blue-600"><u>Home</u></a>
+          <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
+          <a href="#" class="text-xl hover:text-blue-600">Blog</a>
+          <a href="#" class="text-xl hover:text-blue-600">Contact</a>
+          <a href="#" class="text-xl hover:text-blue-600">About Us</a>
+          <div class="flex items-center space-x-4 md:hidden">
+            <a href="#" class="text-xl text-gray-600 hover:text-blue-600"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="text-xl text-gray-600 hover:text-blue-400"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="text-xl text-gray-600 hover:text-pink-500"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <main class="max-w-[1440px] mt-10 mx-auto">
+      <div class="flex justify-center max-w-[1280px]">
+        <div
+          class="grid sm:grid-cols-2 rounded-[50px] overflow:hidden flex relative max-h-[640px]"
+        >
+          <div class="bg-teal-100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsa recusandae iusto quasi? Repudiandae, eum aliquam ea recusandae enim magnam iste! In ducimus molestias exercitationem animi, ea hic nihil corporis dolore eum quo at a dolorem aliquam doloremque suscipit eos eligendi beatae ipsa doloribus est minima expedita? Tenetur voluptatum iusto dolorum tempore reiciendis pariatur nulla itaque voluptatibus deleniti iure! Mollitia quisquam voluptate non ducimus tempore. Quae fugit quisquam ullam sunt placeat impedit perferendis corrupti, provident voluptas illo doloremque obcaecati aliquam ab hic sint, illum deserunt, exercitationem praesentium quidem deleniti aliquid expedita dolorem. Quod, iusto necessitatibus consequatur culpa eum sapiente obcaecati voluptas minima ipsam? Aut maiores consequatur ducimus rem fugit ullam vero voluptate, quae quis mollitia accusantium aliquid odio velit minima, reiciendis perspiciatis voluptatem. Ut doloribus iusto alias. Obcaecati nemo sint placeat exercitationem aliquam, dolorum excepturi beatae architecto officiis id dolorem ut, provident minima recusandae at in, odit esse rem sit.
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </main>
+
+    <!-- <main class="max-w-[1440px]">
+      <section >
+              <div class="grid sm:grid-cols-2 relative m-20 rounded-[50px] overflow-hidden flex">
+        <div
+          id="recipes"
+          class="h-96 bg-teal-100">
+          <div class="absolute top-4 left-8">
+
+    
+              <p class="p-1 sm:p-2 space-x-2 bg-white rounded-full items-center absolute">
+                <i class="fa-solid fa-book"></i>
+                <span class="text-slate-800 ">Hot Recipes</span>
+              </p>
+            <br>
+            <br>
+            <p class="lg:text-5xl sm:text-2xl text-xl left-4 font-medium mb-2">Spicy delicious<br/>
+            chicken wings</p>
+
+            <p class="text-gray-600 mt-3 lg:text-sm  sm:text-xs text-xs">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nam ab <br>incidunt eaque quasi rerum laudantium facilis odit illo earum.
+            </p>
+            <div class="sm:flex sm:mt-4 mt-2 space-x-4 absolute">
+              <div class="bg-neutral-300 rounded-full flex items-center mt-2">
+                <p class="align-center sm:p-2 p-1 sm:space-x-2 space-x-1">
+                  <i class="fa-solid fa-stopwatch"></i>
+                  <span class="text-neutral-600 ">30 Minutes</span>
+                </p>
+              </div>
+              <div class="bg-neutral-300 rounded-full flex items-center mt-2">
+                <p class="align-center sm:p-2 p-1 sm:space-x-2 space-x-1">
+                  <i class="fa-solid fa-utensils"></i>
+                  <span class="text-neutral-600">Chicken</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="md:flex sm:mt-24 mt-24 items-center">
+              <div class="flex">
+              <div id="person">
+                <img src="images/person.png" class=" rounded-full object-cover sm:w-12 sm:h-12 w-10 h-10"/>
+              </div>
+              <div class="ml-4">
+                <p class="sm:font-lightthin font-thin"><b>John Smith</b></p>
+                <p class="text-neutral-600 text-sm">23 Dec 2024</p>
+              </div>
+             </div>
+              <div class="md:flex lg:ml-20 xl:ml-48 md:ml-6 sm:ml-1 bg-black rounded-2xl mt-2 w-40 lg:w-56">
+                <p class="text-white lg:px-8 lg:py-2 lg:ml-2 sm:px-1 sm:py-1 px-1 py-1 ">
+                  View Recipes
+                  <span class="sm:ml-4 ml-0"
+                    ><i class="fa-solid fa-circle-play"></i
+                  ></span>
+                </p>
+              </div>
+            
+            </div>
+            </div>
+            
+          <img
+          src="images/Badge.png"
+          alt="badge"
+          class="logo absolute top-8 left-1/2 transform -translate-x-1/4 z-10 hidden sm:block"
+        />
+        </div>
+        <div
+          id="photo"
+          class="h-96"
+        >
+          <img
+            src="images/Mask Group.png"
+            alt="chicken"
+            class="h-96 w-full object-cover"
+          />
+        </div>
+      </div>  
+    </section>
+    -->
+
+    <!-- <section>
+    <div>
+      <div id="images-content" class="mt-20">
+
+        <div class="sm:flex justify-between">
+          <div>
+            <p class="text-3xl font-semibold ml-8">Categories</p>
+          </div>
+          <div class="bg-sky-200 p-4 rounded-2xl font-semibold mr-8 mt-5 ml-8 w-48">
+            <p>View All Categories</p>
+          </div>
+        </div>
+      </div>
+          
+        <div id="images" class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 m-8 justify-between">
+
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-gray-200 m-4"
+          >
+            <div>
+              <img src="images/categories/breakfast.png" alt="breakfast" />
+            </div>
+            <p class="sm:p-6 pt-3">Breakfast</p>
+          </div>
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-teal-100 m-4"
+          >
+            <div>
+              <img src="images/categories/vegan.png" alt="vegan" />
+            </div>
+            <p class="sm:p-6 pt-3">Vegan</p>
+          </div>
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-pink-100 m-4 "
+          >
+            <div>
+              <img src="images/categories/meat.png" alt="meat" />
+            </div>
+            <p class="sm:p-6 pt-3">Meat</p>
+          </div>
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-red-50 m-4"
+          >
+            <div>
+              <img src="images/categories/Dessert.png" alt="dessert" />
+            </div>
+            <p class="sm:p-6 pt-3">Dessert</p>
+          </div>
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-amber-100 m-4"
+          >
+            <div>
+              <img src="images/categories/lunch.png" alt="lunch" />
+            </div>
+            <p class="sm:p-6 pt-3">Lunch</p>
+          </div>
+
+          <div
+            class="p-9 border-transparent rounded-2xl bg-gradient-to-t from-white md:from-red-100 m-4"
+          >
+            <div>
+              <img src="images/categories/chocolate.png" alt="choco" />
+            </div>
+            <p class="sm:p-6 pt-3">Chocolate</p>
+          </div>
+
+        </div>
+      </div>
+    </section>  -->
+
+    <script>
+      const icon = document.getElementById("icon");
+      const mobileNav = document.getElementById("mobile");
+
+      icon.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
