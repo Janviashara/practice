@@ -1,213 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Estate</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="font-sans" style="font-family: 'Urbanist', sans-serif">
-    <!-- Navbar -->
 
-    <nav
-      class="bg-white fixed w-full top-0 left-0 z-10 border-b border-gray-200"
-    >
-      <div
-        class="flex justify-between items-center max-w-[1280px] 2xl:mx-auto sm:mx-20 sm:my-10 mx-auto px-4 sm:px-0 py-6 sm:py-0"
-      >
-        <!-- Logo -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-        <a href="#" class="flex items-center">
-          <img
-            src="images/Foodieland..png"
-            class="h-5 md:h-5 lg font-medium:h-[30px]"
-            alt="Logo"
-          />
+
+</head>
+
+<body class="font-sans" style="font-family: 'Urbanist', sans-serif">
+  <!-- Navbar -->
+
+  <nav class="bg-white sticky w-full top-0 left-0 z-10 border-b border-gray-200">
+    <div
+      class="flex justify-between items-center max-w-[1280px] 2xl:mx-auto sm:mx-20 sm:my-10 mx-auto px-4 sm:px-0 py-6 sm:py-0">
+      <!-- Logo -->
+
+      <a href="#" class="flex items-center">
+        <img src="images/Foodieland..png" class="h-5 md:h-5 lg font-medium:h-[30px]" alt="Logo" />
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex md:justify-between md:items-center">
+        <ul class="flex list-none w-full lg font-medium:space-x-[60px] lg font-medium:space-x-10 space-x-4">
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Home</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Recipes</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">About Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hidden md:flex items-center md:space-x-9 space-x-4">
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-600">
+          <i class="fa-brands fa-facebook-f"></i>
         </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex md:justify-between md:items-center">
-          <ul
-            class="flex list-none w-full lg font-medium:space-x-[60px] lg font-medium:space-x-10 space-x-4"
-          >
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Recipes</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >About Us</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="hidden md:flex items-center md:space-x-9 space-x-4">
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-600">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-400"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-pink-500"
-            ><i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
-
-        <div class="md:hidden flex">
-          <button id="side-bars" class="text-2xl focus:outline-none">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-pink-500"><i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile" class="md:hidden hidden bg-white-100 py-4 block">
-        <nav class="flex flex-col items-center space-y-4 py-4">
-          <a href="#" class="text-xl hover:text-blue-600">Home</a>
-          <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
-          <a href="#" class="text-xl hover:text-blue-600">Blog</a>
-          <a href="#" class="text-xl hover:text-blue-600">Contact</a>
-          <a href="#" class="text-xl hover:text-blue-600">About Us</a>
-          <div class="flex space-x-4">
-            <a href="#" class="text-xl text-gray-600 hover:text-blue-600"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" class="text-xl text-gray-600 hover:text-blue-400"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="text-xl text-gray-600 hover:text-pink-500"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </nav>
+      <div class="md:hidden flex">
+        <button id="side-bars" class="text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-    </nav>
+    </div>
 
-    <!-- 
+    <!-- Mobile Menu -->
+    <div id="mobile" class="md:hidden hidden bg-white-100 py-4 block">
+      <nav class="flex flex-col items-center space-y-4 py-4">
+        <a href="#" class="text-xl hover:text-blue-600">Home</a>
+        <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
+        <a href="#" class="text-xl hover:text-blue-600">Blog</a>
+        <a href="#" class="text-xl hover:text-blue-600">Contact</a>
+        <a href="#" class="text-xl hover:text-blue-600">About Us</a>
+        <div class="flex space-x-4">
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+        </div>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- 
       Building in apply also gradient
      -->
 
-    <!-- Main content  -->
+  <!-- Main content  -->
 
-    <main class="mt-[162px] 2xl:max-w-[1920px] xl:max-w-[1440px] mx-auto">
+  <main class="max-w-[1920px] mx-auto">
 
-      <div >
+    <div>
 
-        <div class="flex bg-black relative">
+      <div class="grid grid-cols-2 gap-[60px] 2xl:gap-20 bg-black relative">
 
-          <div class="bg-black 2xl:w-[920px] xl:w-[690px] text-white 
-          2xl:mr-20 2xl:pl-[162px] 2xl:py-36 xl:mr-[60px] xl:pl-20 xl:py-[98px]  ">
+        <div
+          class="bg-black text-white 2xl:pl-[162px] 2xl:py-36 xl:pl-20 xl:py-[98px]  ">
 
-            <div class="2xl:font-semibold 2xl:text-6xl 2xl:leading-[72px] 
+          <div class="2xl:font-semibold 2xl:text-6xl 2xl:leading-[72px] 
                           xl:font-semibold xl:text-[46px] xl:leadind-[55.2px] ">
-              <p>Discover Your Dream Property with Estatein</p>
+            <p>Discover Your Dream Property with Estatein</p>
+          </div>
+
+          <div
+            class="2xl:font-medium 2xl:text-[18px] 2xl:leading-[27px] 2xl:text-[#999999] 2xl:mt-6 xl:mt-5 xl:font-medium xl:text-base xl:text-[#999999]">
+            <p>
+              Your journey to finding the perfect property begins here.
+              Explore our listings to find the home that matches your
+              dreams.
+            </p>
+          </div>
+
+          <div class="2xl:mt-[60px] xl:mt-[50px] ">
+            <button
+              class="border border-[#262626] py-[18px] px-6 2xl:rounded-[10px] xl:rounded-lg mr-5 text-lg font-medium ">Learn
+              More</button>
+            <button
+              class="border border-transparent py-[18px] px-6 rounded-[10px] bg-indigo-500 text-lg font-medium">Browse
+              Properties</button>
+          </div>
+
+          <div class="mt-[60px] flex space-x-5">
+
+            <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1">
+              <h1 class="font-bold text-[40px] leading-[60px] mb-0.5">200+</h1>
+              <p class="text-[18px] text-[#999999] leadind-[27px]">Happy Customers</p>
             </div>
 
-                 <div
-                  class="2xl:font-medium 2xl:text-[18px] 2xl:leading-[27px] 2xl:text-[#999999] 2xl:mt-6 xl:mt-5 xl:font-medium xl:text-base xl:text-[#999999]" 
-                >
-                  <p>
-                    Your journey to finding the perfect property begins here.
-                    Explore our listings to find the home that matches your
-                    dreams.
-                  </p>
-                </div>
-              
-             <div class="2xl:mt-[60px] xl:mt-[50px] ">
-                <button class="border border-[#262626] py-[18px] px-6 2xl:rounded-[10px] xl:rounded-lg mr-5 text-lg font-medium ">Learn More</button>
-                <button class="border border-transparent py-[18px] px-6 rounded-[10px] bg-indigo-500 text-lg font-medium">Browse Properties</button>
-             </div>
-
-             <div class="mt-[60px] flex space-x-5">
-              
-              <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1" >
-                  <h1 class="font-bold text-[40px] leading-[60px] mb-0.5">200+</h1>
-                  <p class="text-[18px] text-[#999999] leadind-[27px]">Happy Customers</p>
-              </div>
- 
-              <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1" >
-                <h1 class="font-bold text-[40px] leading-[60px] mb-0.5">10k+</h1>
-                <p class="text-[18px] text-[#999999] leadind-[27px]">Properties for clients</p>
+            <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1">
+              <h1 class="font-bold text-[40px] leading-[60px] mb-0.5">10k+</h1>
+              <p class="text-[18px] text-[#999999] leadind-[27px]">Properties for clients</p>
             </div>
- 
-            <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1" >
+
+            <div class="border border-[#262626] rounded-xl px-6 py-4 bg-[#1A1A1A] flex-1">
               <h1 class="font-bold text-[40px] leading-[60px] mb-0.5">16+</h1>
               <p class="text-[18px] text-[#999999] leadind-[27px]">Years of Experience</p>
-          </div>
+            </div>
 
-             </div>
-            
-          </div>
-
-          <div class="absolute top-36 left-2/4 transform -translate-x-1/4 z-1">
-            <img
-              src="image/centerlogo.png"
-              alt="logo"
-              class="2xl:h-full xl:h-[123px]"
-            />
-          </div>
-        
-          <div class="2xl:w-[920px] xl:w-[690px]">
-            <img src="image/Building.png" alt="image" class="bg-[#1A1A1A]" />
           </div>
 
         </div>
-           
-          
-        <div class="shadow-[0_0_0_10px_#191919] invert-0">
+
+        <div class="absolute top-36 left-2/4 transform -translate-x-1/4 z-1">
+          <img src="image/centerlogo.png" alt="logo" class="2xl:h-full xl:h-[123px]" />
+        </div>
+
+        <div class="">
+          <img src="image/Building.png" alt="image" class="bg-[#1A1A1A]" />
+        </div>
+
+      </div>
+
+
+      <div class="shadow-[0_0_0_10px_#191919] invert-0">
         <div class="border border-[#262626] bg-black p-5 g-5 relative lg:shadow-[0_0_0_10px_#191919] ">
-         <div class="flex gap-5">
-            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1" >
+          <div class="flex gap-5">
+            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1">
               <img src="image/Home.png" alt="dream Home">
               <!-- <img src="image/Arrow.png" alt="up" class="icon absolute top:2 left:4" > -->
-            <p class="text-white">Find Your Dream Home</p>
+              <p class="text-white">Find Your Dream Home</p>
             </div>
 
-            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1" >
-             <img src="image/property.png" alt="Property"> 
-             <p class="text-white">Unlock Property Value</p>
+            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1">
+              <img src="image/property.png" alt="Property">
+              <p class="text-white">Unlock Property Value</p>
             </div>
 
-            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1" >
-              <img src="image/Build2.png" alt="Management" >
+            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1">
+              <img src="image/Build2.png" alt="Management">
               <p class="text-white">Effortless Property Management</p>
             </div>
-            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1" >
+            <div class="border rounded-xl  border-[#262626] bg-[#1A1A1A] flex-1">
               <img src="image/information.png" alt="info">
               <p class="text-white">Smart Investments, Informed Decisions</p>
             </div>
@@ -216,13 +176,14 @@
       </div>
   </main>
 
-    <script>
-      const sideBars = document.getElementById("side-bars");
-      const mobileMenu = document.getElementById("mobile");
+  <script>
+    const sideBars = document.getElementById("side-bars");
+    const mobileMenu = document.getElementById("mobile");
 
-      sideBars.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+    sideBars.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>
