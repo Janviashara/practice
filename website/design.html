@@ -1,460 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Estate</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body class="font-sans bg-black" style="font-family: 'Urbanist', sans-serif">
-    <!-- Navbar -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <nav
-      class="bg-white sticky w-full top-0 left-0 z-10 border-b border-gray-200"
-    >
-      <div
-        class="flex justify-between items-center max-w-[1280px] mx-auto sm:px-20 sm:py-10 px-4 py-6"
-      >
-        <!-- Logo -->
+<body class="font-sans bg-black" style="font-family: 'Urbanist', sans-serif">
+  <!-- Navbar -->
 
-        <a href="#" class="flex items-center">
-          <img
-            src="images/Foodieland..png"
-            class="h-5 md:h-5 lg font-medium:h-[30px]"
-            alt="Logo"
-          />
+  <nav class="bg-white sticky w-full top-0 left-0 z-10 border-b border-gray-200">
+    <div class="flex justify-between items-center max-w-[1280px] mx-auto sm:px-20 sm:py-10 px-4 py-6">
+      <!-- Logo -->
+
+      <a href="#" class="flex items-center">
+        <img src="images/Foodieland..png" class="h-5 md:h-5 lg font-medium:h-[30px]" alt="Logo" />
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex md:justify-between md:items-center">
+        <ul class="flex list-none w-full lg font-medium:space-x-[60px] lg font-medium:space-x-10 space-x-4">
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Home</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Recipes</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600">About Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hidden md:flex items-center md:space-x-9 space-x-4">
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-600">
+          <i class="fa-brands fa-facebook-f"></i>
         </a>
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="sm:text-2xl text-black-600 hover:text-pink-500"><i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex md:justify-between md:items-center">
-          <ul
-            class="flex list-none w-full lg font-medium:space-x-[60px] lg font-medium:space-x-10 space-x-4"
-          >
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Recipes</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="font-medium text-base leading-[19.36px] tracking-[-2%] hover:text-blue-600"
-                >About Us</a
-              >
-            </li>
-          </ul>
+      <div class="md:hidden flex">
+        <button id="side-bars" class="text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile" class="md:hidden hidden bg-white-100 py-4 block">
+      <nav class="flex flex-col items-center space-y-4 py-4">
+        <a href="#" class="text-xl hover:text-blue-600">Home</a>
+        <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
+        <a href="#" class="text-xl hover:text-blue-600">Blog</a>
+        <a href="#" class="text-xl hover:text-blue-600">Contact</a>
+        <a href="#" class="text-xl hover:text-blue-600">About Us</a>
+        <div class="flex space-x-4">
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-xl text-gray-600 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+        </div>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- Main content  -->
+
+    <!-- hero section -->
+
+  <main class="max-w-[1920px] mx-auto">
+    <div class="grid sm:grid-cols-2 sm:gap-[60px] 2xl:gap-20 bg-black relative">
+      <div class="bg-black text-white 2xl:pl-[162px] 2xl:py-36 xl:pl-20 xl:py-[98px] sm:py-14 sm:pl-8">
+        <div>
+          <p
+            class="px-4 sm:px-0 font-semibold 2xl:text-6xl 2xl:leading-[72px] xl:text-[46px] xl:leading-[55.2px] sm:text-2xl text-[28px] leading-[33.6px]">
+            Discover Your Dream<br />
+            Property with Estatein
+        </p >
+        
+        <p class="px-4 sm:px-0 font-medium 2xl:text-[18px] 2xl:leading-[27px] text-[#999999] 2xl:mt-6 xl:mt-5 xl:text-base sm:text-xs text-sm mt-4">
+          
+            Your journey to finding the perfect property begins here.
+            Explore our listings to find the home that matches your dreams.
+          </p>
         </div>
 
-        <div class="hidden md:flex items-center md:space-x-9 space-x-4">
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-600">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-blue-400"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="#" class="sm:text-2xl text-black-600 hover:text-pink-500"
-            ><i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
+        <div class="px-4 sm:px-0 2xl:mt-[60px] xl:mt-[50px] sm:mt-8  mt-10 sm:flex sm:flex-row flex flex-col ">
+          <button class="border border-[#262626] 2xl:rounded-[10px] rounded-lg sm:mr-5 font-medium 
+                2xl:py-[18px] 2xl:px-6 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2 2xl:text-[18px] 2xl:leading-[27px] sm:text-sm px-[14px] py-5 text-sm">
+            <p>Learn More</p>
 
-        <div class="md:hidden flex">
-          <button id="side-bars" class="text-2xl focus:outline-none">
-            <i class="fas fa-bars"></i>
+          </button>
+          <button class="2xl:rounded-[10px] rounded-lg bg-[#703BF7] font-medium 2xl:py-[18px] 2xl:px-6 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2 2xl:text-[18px] 2xl:leading-[27px]
+                sm:text-sm mt-4 sm:mt-0 px-[14px] py-5 text-sm">
+            <p>Browse Properties</p>
           </button>
         </div>
-      </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile" class="md:hidden hidden bg-white-100 py-4 block">
-        <nav class="flex flex-col items-center space-y-4 py-4">
-          <a href="#" class="text-xl hover:text-blue-600">Home</a>
-          <a href="#" class="text-xl hover:text-blue-600">Recipes</a>
-          <a href="#" class="text-xl hover:text-blue-600">Blog</a>
-          <a href="#" class="text-xl hover:text-blue-600">Contact</a>
-          <a href="#" class="text-xl hover:text-blue-600">About Us</a>
-          <div class="flex space-x-4">
-            <a href="#" class="text-xl text-gray-600 hover:text-blue-600"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" class="text-xl text-gray-600 hover:text-blue-400"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="text-xl text-gray-600 hover:text-pink-500"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </nav>
-      </div>
-    </nav>
 
-    <!-- Main content  -->
-
-    <main class="max-w-[1920px] mx-auto">
-      <div
-        
-          class="grid sm:grid-cols-2 sm:gap-[60px] 2xl:gap-20 bg-black relative"
-        >
+        <div
+          class="px-4 sm:px-0 2xl:mt-[60px] xl:mt-[50px] sm:mt-10 sm:grid sm:grid-cols-3 2xl:gap-x-5 xl:gap-x-4 sm:gap-x-3 mt-10 grid grid-cols-2 gap-y-3">
           <div
-            class="bg-black text-white 2xl:pl-[162px] 2xl:py-36 xl:pl-20 xl:py-[98px] sm:py-14 sm:pl-8"
-          >
-            <div>
+            class="border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md rounded-lg flex-1 mr-3 sm:mr-0">
+            <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2 p-4">
+              <h1
+                class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base text-[24px] leading-9 text-center sm:text-left">
+                200+</h1>
               <p
-                class="px-4 sm:px-0 font-semibold 2xl:text-6xl 2xl:leading-[72px] xl:text-[46px] xl:leading-[55.2px] sm:text-2xl text-[28px] leading-[33.6px]"
-              >
-                Discover Your Dream<br />
-                Property with Estatein
-              </p>
+                class="font-medium text-[#999999] 2xl:text-lg mt-0.5 xl:text-base sm:text-xs text-sm text-center sm:text-left">
+                Happy Customers</p>
             </div>
-
-            <div
-              class="px-4 sm:px-0 font-medium 2xl:text-[18px] 2xl:leading-[27px] text-[#999999] 2xl:mt-6 xl:mt-5 xl:text-base sm:text-xs mt-4"
-            >
-              <p>
-                Your journey to finding the perfect property begins here.
-                Explore our listings to find the home that matches your dreams.
-              </p>
-            </div>
-
-            <div
-              class="px-4 sm:px-0 2xl:mt-[60px] xl:mt-[50px] mt-8 sm:flex sm:flex-row flex flex-col "
-            >
-              <button
-                class="border border-[#262626] 
-                2xl:rounded-[10px] rounded-lg 
-                sm:mr-5 font-medium 
-                2xl:py-[18px] 2xl:px-6 
-                xl:px-5 xl:py-[14px] 
-                sm:px-2 sm:py-2
-                2xl:text-[18px] 2xl:leading-[27px]
-                sm:text-sm
-                
-                mb-4 sm:mb-0"
-              >
-               <p>Learn More</p>
-
-              </button>
-              <button
-                class="2xl:rounded-[10px] rounded-lg bg-[#703BF7] 
-                font-medium  
-                2xl:py-[18px] 2xl:px-6 
-                xl:px-5 xl:py-[14px] 
-                sm:px-2 sm:py-2
-                2xl:text-[18px] 2xl:leading-[27px]
-                sm:text-sm"
-              >
-                <p>Browse Properties</p>
-              </button>
-            </div>
-            
-            
-
-            <!-- <div
-              class="sm:grid sm:grid-cols-3 sm:mt-[60px] mt-8 grid grid-cols-2 sm:gap-x-3 md:gap-x-2 px-4 sm:px-0  gap-y-3"
-            >
-              <div
-                class="border border-[#262626] rounded-xl  md:p-5 sm:p-2 bg-[#1A1A1A] flex-1 p-4 sm:p-0"
-              >
-                <div class="lg:px-6 lg:py-4">
-                  <h1
-                  class="font-bold lg:text-[40px] lg:leading-[60px] md:text-[30px] md:leading-[45px] sm:text-xl lg:mb-0.5 text-2xl"
-                >
-                  200+
-                </h1>
-                <p
-                  class="lg:text-[18px] text-[#999999] lg:leadind-[27px] sm:text-sm text-xs"
-                >
-                  Happy Customers
-                </p>
-                </div>
-              </div>
-
-              <div
-                class="border border-[#262626] rounded-xl lg:px-6 lg:py-4 md:p-5 sm:p-2 bg-[#1A1A1A] flex-1 p-4 sm:mr-3"
-              >
-                <h1
-                  class="font-bold xl:text-[40px] lg:leading-[60px] sm:text-xl lg:mb-0.5 md:text-[30px] md:leading-[45px] text-2xl flex items-center justify-center"
-                >
-                  10k+
-                </h1>
-                <p
-                  class="lg:text-[18px] text-[#999999] lg:leadind-[27px] sm:text-sm text-xs font-medium flex text-center justify-center"
-                >
-                  Properties for clients
-                </p>
-              </div>
-              <div
-                class="col-span-3 sm:col-span-1 border border-[#262626] rounded-xl lg:px-6 lg:py-4 md:p-5 sm:p-2 bg-[#1A1A1A] flex-1 p-4 mb-10 sm:mb-0"
-              >
-                <h1
-                  class="font-bold xl:text-[40px] lg:leading-[60px] sm:text-xl lg:mb-0.5 md:text-[30px] md:leading-[45px] text-2xl flex items-center justify-center"
-                >
-                  16+
-                </h1>
-                <p
-                  class="lg:text-[18px] text-[#999999] lg:leadind-[27px] sm:text-sm text-xs flex text-center justify-center"
-                >
-                  Years of Experience
-                </p>
-              </div>
-            </div> -->
-
-            <div class="2xl:mt-[60px] xl:mt-[50px] sm:mt-10 grid grid-cols-3 2xl:gap-x-5 xl:gap-x-4 sm:gap-x-3">
-              <div class="border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md flex-1">
-                <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2">
-                  <h1 class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base">200+</h1>
-                  <p class="font-medium 2xl:text-lg mt-0.5 xl:text-base sm:text-xs">Happy Customers</p>
-                </div>
-              </div>
-
-              <div class="border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md flex-1">
-                <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2">
-                  <h1 class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base">10k+</h1>
-                  <p class="font-medium 2xl:text-lg mt-0.5 xl:text-base sm:text-xs">Properties for clients</p>
-                </div>
-              </div>
-              
-              <div class="border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md flex-1">
-                <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2">
-                  <h1 class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base">16+</h1>
-                  <p class="font-medium 2xl:text-lg mt-0.5 xl:text-base sm:text-xs">Years of Experience</p>
-                </div>
-              </div>
-
-            </div>
-
-
           </div>
 
           <div
-            class="absolute sm:top-36 sm:left-2/4 sm:transform sm:-translate-x-1/3 z-1 left-4 fixed top-56"
-          >
-            <img
-              src="image/centerlogo.png"
-              alt="logo"
-              class="2xl:h-auto lg:h-[129px] sm:h-[110px]  h-[117px]"
-            />
+            class="border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md rounded-lg flex-1">
+            <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2 p-4">
+              <h1
+                class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base text-[24px] leading-9 text-center sm:text-left">
+                10k+</h1>
+              <p
+                class="font-medium text-[#999999] 2xl:text-lg mt-0.5 xl:text-base sm:text-xs text-sm text-center sm:text-left">
+                Properties for clients</p>
+            </div>
           </div>
 
           <div
-            class="bg-black order-first pt-10 px-4 sm:px-0 sm:pt-0 sm:order-last pb-14 sm:pb-0"
-          >
-            <img
-              src="image/sky2.png"
-              alt="image"
-              class="bg-[#1A1A1A] h-full object-cover border rounded-xl sm:rounded-none border-transparent"
-            />
+            class="col-span-3 sm:col-span-1  border border-[#262626] bg-[#1A1A1A] 2xl:rounded-xl xl:rounded-[10px] sm:rounded-md rounded-lg flex-1">
+            <div class="2xl:px-6  2xl:py-4 xl:px-5 xl:py-[14px] sm:px-2 sm:py-2 p-4">
+              <h1
+                class="font-bold 2xl:text-[40px] 2xl:leading-[60px] xl:text-[30px] xl:[45px] sm:text-base text-[24px] leading-9 text-center sm:text-left">
+                16+</h1>
+              <p
+                class="font-medium text-[#999999] 2xl:text-lg mt-0.5 xl:text-base sm:text-xs text-sm text-center sm:text-left">
+                Years of Experience</p>
+            </div>
           </div>
-        </div>
 
-       <div
-          class="border lg:border-8 sm:border-[6px] border-4 rounded-xl sm:rounded-none border-[#262626] bg-black relative sm:mx-0 mx-4"
-        >
-          <div
-            class="sm:gap-5 sm:p-5 p-2.5 gap-2.5 grid grid-cols-2 md:grid-cols-4"
-          >
-            <div
-              class="border rounded-xl border-[#262626] bg-[#1A1A1A] px-5 py-10 relative"
-            >
-             <div class="flex justify-center">
-              <img
-              src="image/Home.png"
-              alt="dream Home"
-              class="h-12 sm:h-auto "
-            />
-            <img
-              src="image/Icon.png"
-              alt="icon"
-              class="absolute top-0 right-0 mt-5 mr-5"
-            />
-             </div>
-             <div class="text-white text-center font-semibold text-[20px] leading-[30px] mt-5">
-              Find Your Dream Home 
-            </div>  
-            </div>
-
-            <div
-              class="border rounded-xl border-[#262626] bg-[#1A1A1A] px-5 py-10 relative"
-            >
-             <div class="flex justify-center">
-              <img
-              src="image/property.png"
-              alt="dream Home"
-              class="h-12 sm:h-auto "
-            />
-            <img
-              src="image/Icon.png"
-              alt="icon"
-              class="absolute top-0 right-0 mt-5 mr-5"
-            />
-             </div>
-             <div class="text-white text-center font-semibold text-[20px] leading-[30px] mt-5">
-              Unlock Property Value 
-            </div>  
-            </div>
-
-            <div
-              class="border rounded-xl border-[#262626] bg-[#1A1A1A] px-5 py-10 relative"
-            >
-             <div class="flex justify-center">
-              <img
-              src="image/Build2.png"
-              alt="dream Home"
-              class="h-12 sm:h-auto "
-            />
-            <img
-              src="image/Icon.png"
-              alt="icon"
-              class="absolute top-0 right-0 mt-5 mr-5"
-            />
-             </div>
-             <div class="text-white text-center font-semibold text-[20px] leading-[30px] mt-5">
-             Effortless Property Management 
-            </div>  
-            </div>
-
-            <div
-              class="border rounded-xl border-[#262626] bg-[#1A1A1A] px-5 py-10 relative"
-            >
-             <div class="flex justify-center">
-              <img
-              src="image/information.png"
-              alt="dream Home"
-              class="h-12 sm:h-auto "
-            />
-            <img
-              src="image/Icon.png"
-              alt="icon"
-              class="absolute top-0 right-0 mt-5 mr-5"
-            />
-             </div>
-             <div class="text-white text-center font-semibold text-[20px] leading-[30px] mt-5">
-             Smart Investments, Informed Decisions
-            </div>  
-            </div>
-
-        </div>
-    </div>
-            
-
-        <!-- lg:border-8 sm:border-[6px] border-4 -->
-
-        <!-- <div class="grid grid-cols-4 border p-5 gap-5  rounded-xl sm:rounded-none border-[#262626] bg-black relative sm:mx-0 mx-4">
-          <div class="border rounded-xl border-[#262626] bg-[#1A1A1A] px-5 py-10">
-            <div class="absolute top-0 right-0 mr-5 mt-5">
-              <img src="image/Icon.png" alt="arrow">
-            </div>
-            <div class="flex justify-center">
-              <img src="image/Home.png" alt="home">
-            </div>            
-            <div class="text-white text-center font-semibold text-[20px] leading-[30px]">
-              Find Your Dream Home 
-            </div>
-          </div> -->
-        
-
-
-
-        <div class="bg-black max-w[1920px]">
-          <div class="sm:mx-[142px] sm:mt-[110px] mt-[61px]">
-            <img src="image/spark.png" alt="spark"/>
-          </div>
-          <div class="sm:mx-[162px] text-white">
-            
-              <div>
-                <p class="font-semibold text-5xl leading-[72px]">
-                  Featured Properties
-                </p>
-                <div class="flex justify-between">
-                <p class="font-medium text-lg text-[#999999]">
-                  Explore our handpicked selection of featured properties. Each
-                  listing offers a glimpse into exceptional homes and
-                  investments available through <br>Estatein. Click "View Details"
-                  for more information
-                </p>
-                <button
-                  class="bg-[#262626] rounded-[10px] border border-[#262626] px-6 py-[18px]"
-                >
-                  View All Properties
-                </button>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-3 mt-20 gap-[30px]">
-                <div class="border rounded-xl border-[#262626] p-10">
-                  <div>
-                    <img src="image/HOme1.png" alt="Home image">
-                  </div>
-                  <div class="mt-[30px]">
-                    <p class="font-semibold text-[24px] leading-[36px]">Seaside Serenity Villa</p>
-                  </div>
-                  <div>
-                    <p>A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More</p>
-                  </div>
-                </div>
-
-                <div class="border rounded-xl p-10 border-[#262626]">
-                  <div>
-                    <img src="image/home2.png" alt="Home 2">
-                  </div>
-                  <div>
-                     ffdvf
-                  </div>
-                </div>
-
-
-                <div class="border rounded-xl p-10 border-[#262626]">
-                  <div>
-                    
-                    <img src="image/Home3.png" alt="Home 3">
-                </div>
-                <div>dgfdgf</div>
-                </div>
-            </div>
-
-          </div>
         </div>
       </div>
-    </main>
 
-    <script>
-      const sideBars = document.getElementById("side-bars");
-      const mobileMenu = document.getElementById("mobile");
+      <div class="absolute 2xl:top-36  xl:top-24 sm:top-14 sm:left-2/4 sm:transform sm:-translate-x-1/3 z-1 left-4">
+        <img src="image/centerlogo.png" alt="logo" class="2xl:h-auto xl:h-[129px] sm:h-[110px] h-[117px]" />
+      </div>
 
-      sideBars.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+
+      <div class="bg-black order-first pt-10 px-4 sm:px-0 sm:pt-0 sm:order-last mb-14 sm:mb-0">
+        <img src="image/sky2.png" alt="image"
+          class="bg-[#1A1A1A] h-full object-cover border rounded-xl sm:rounded-none border-transparent" />
+      </div>
+    </div>
+
+    <div
+      class="border lg:border-8 sm:border-[6px] border-4 rounded-xl sm:rounded-none border-[#262626] bg-black relative sm:mx-0 mx-4 mt-10 sm:mt-0">
+      <div class="sm:gap-5 sm:p-5 p-2.5 gap-2.5 grid grid-cols-2 md:grid-cols-4">
+        <div
+          class="border 2xl:rounded-xl rounded-[10px] border-[#262626] bg-[#1A1A1A] 2xl:px-5 2xl:py-10 xl:py-[30px] xl:px-4 sm:px-2 sm:py-4 py-5 px-[14px] relative">
+          <div class="flex justify-center">
+            <img src="image/Home.png" alt="dream Home" class="2xl:h-full xl:h-11 sm:h-9 h-12" />
+            <img src="image/Icon.png" alt="icon" class="absolute top-0 right-0 mt-5 mr-5 2xl:h-[34px] h-[26px]" />
+          </div>
+          <div
+            class="text-white text-center font-semibold 2xl:text-[20px] 2xl:leading-[30px] 2xl:mt-5 xl:text-base xl:mt-4 text-sm mt-[14px]">
+            Find Your Dream Home
+          </div>
+        </div>
+
+        <div
+          class="border 2xl:rounded-xl rounded-[10px] border-[#262626] bg-[#1A1A1A] 2xl:px-5 2xl:py-10 xl:py-[30px] xl:px-4 sm:px-2 sm:py-4 py-5 px-[14px] relative">
+          <div class="flex justify-center">
+            <img src="image/property.png" alt="dream Home" class="2xl:h-full xl:h-11 sm:h-9 h-12" />
+            <img src="image/Icon.png" alt="icon" class="absolute top-0 right-0 mt-5 mr-5 2xl:h-[34px] h-[26px]" />
+          </div>
+          <div
+            class="text-white text-center font-semibold  2xl:text-[20px] 2xl:leading-[30px] 2xl:mt-5 xl:text-base xl:mt-4 text-sm mt-[14px]">
+            Unlock Property Value
+          </div>
+        </div>
+
+        <div
+          class="border 2xl:rounded-xl rounded-[10px] border-[#262626] bg-[#1A1A1A] 2xl:px-5 2xl:py-10 xl:py-[30px] xl:px-4 sm:px-2 sm:py-4 py-5 px-[14px] relative">
+          <div class="flex justify-center">
+            <img src="image/Build2.png" alt="dream Home" class="2xl:h-full xl:h-11 sm:h-9 h-12" />
+            <img src="image/Icon.png" alt="icon" class="absolute top-0 right-0 mt-5 mr-5 2xl:h-[34px] h-[26px]" />
+          </div>
+          <div
+            class="text-white text-center font-semibold  2xl:text-[20px] 2xl:leading-[30px] 2xl:mt-5 xl:text-base xl:mt-4 text-sm mt-[14px]">
+            Effortless Property Management
+          </div>
+        </div>
+
+        <div
+          class="border 2xl:rounded-xl rounded-[10px] border-[#262626] bg-[#1A1A1A] 2xl:px-5 2xl:py-10 xl:py-[30px] xl:px-4 sm:px-2 sm:py-4 py-5 px-[14px] relative">
+          <div class="flex justify-center">
+            <img src="image/information.png" alt="dream Home" class="2xl:h-full xl:h-11 sm:h-9 h-12" />
+            <img src="image/Icon.png" alt="icon" class="absolute top-0 right-0 mt-5 mr-5 2xl:h-[34px] h-[26px]" />
+          </div>
+          <div
+            class="text-white text-center font-semibold  2xl:text-[20px] 2xl:leading-[30px] 2xl:mt-5 xl:text-base xl:mt-4 text-sm mt-[14px]">
+            Smart Investments, Informed Decisions
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+<!-- second section -->
+
+    <div class="2xl:mx-[142px] 2xl:mt-[110px] xl:mx-[70px] xl:mt-[90px] sm:mx-16 sm:mt-16 mx-2 mt-[61px]">
+      <img src="image/spark.png" alt="spark" />
+    </div>
+    <div class="bg-black 2xl:mx-[162px] xl:mx-20 sm:mx-16">
+
+        <div class="flex">
+        <div class="2xl:mt-[10px] xl:mt-1.5 sm:mt-0.5 w-[1200px]">
+          <p class="text-white font-semibold 2xl:text-[48px] 2xl:leading-[72px] xl:text-[38px] xl:leading-[57px] sm:text-4xl text-[28px] leading-[42px] flex-1">
+            Featured Properties
+          </p>
+          <p class="2xl:mt-3.5 xl:mt-2.5 sm:mt-1.5 mt-1.5 font-medium 2xl:text-[18px] 2xl:leading-[27px] text-[#4D4D4D] xl:text-[18px] xl:leading-[27px] sm:text-sm text-sm ">
+            Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more information
+          </p>
+        </div>
+      
+          <div class="hidden sm:block ml-[200px]">
+            <button class="bg-[#262626] rounded-[10px] border border-[#262626] px-6 py-[18px]">
+              <p class="text-white font-medium text-lg">View All Properties</p>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-3 mt-20 gap-[30px]">
+
+          <div class="border rounded-xl border-[#262626] p-10 hidden sm:block">
+            <div>
+              <img src="image/HOme1.png" alt="Home image">
+            </div>
+            <div>
+            <div class="mt-[30px]">
+              <p class="text-white font-semibold text-[24px] leading-[36px]">Seaside Serenity Villa</p>
+            </div>
+
+            <div class="mt-1.5">
+              <p class="font-medium text-lg text-[#999999]">A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...
+              <span class="font-medium text-lg text-white underline decoration-1">Read More</span></p>
+            </div>
+
+            <div class="mt-[30px] flex gap-2.5">
+                <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                  <div>
+                    <img src="image/bedroom.png" alt="icon">
+                  </div>
+                  <div>
+                    <p class="text-white font-medium text-lg">4-Bedroom</p>
+                  </div>
+                </div>
+                <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                  <div>
+                    <img src="image/bathroom.png" alt="icon">
+                  </div>
+                  <div>
+                    <p class="text-white font-medium text-lg">3-Bathroom</p>
+                  </div>
+                </div>
+                <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                  <div>
+                    <img src="image/villa.png" alt="icon">
+                  </div>
+                  <div>
+                    <p class="text-white font-medium text-lg">Villa</p>
+                  </div>
+                </div>        
+            </div>
+
+            <div class="mt-[30px] flex justify-between">
+                <div class="">
+                  <p class="text-[#999999] font-medium text-lg">price</p>
+                  <p class="text-white font-semibold text-[24px] leading-[36px]">$555,000</p>
+                </div>
+                <div class="">
+                  <button class="bg-[#703BF7] text-white rounded-lg px-6 py-[18px]">View Property Details</button>
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="border rounded-xl p-10 border-[#262626] hidden sm:block">
+            <div>
+              <img src="image/home2.png" alt="Home 2">
+            </div>
+            <div>
+              <div class="mt-[30px]">
+                <p class="text-white font-semibold text-[24px] leading-[36px]">Metropolitan Haven</p>
+              </div>
+  
+              <div class="mt-1.5">
+                <p class="font-medium text-lg text-[#999999]">A chic and fully-furnished 2-bedroom apartment with panoramic city views...
+                <span class="font-medium text-lg text-white underline decoration-1">Read More</span></p>
+              </div>
+  
+              <div class="mt-[30px] flex gap-2.5">
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/bedroom.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">2-Bedroom</p>
+                    </div>
+                  </div>
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/bathroom.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">2-Bathroom</p>
+                    </div>
+                  </div>
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/villa.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">Villa</p>
+                    </div>
+                  </div>        
+              </div>
+  
+              <div class="mt-[30px] flex justify-between">
+                  <div class="">
+                    <p class="text-[#999999] font-medium text-lg">price</p>
+                    <p class="text-white font-semibold text-[24px] leading-[36px]">$555,000</p>
+                  </div>
+                  <div class="">
+                    <button class="bg-[#703BF7] text-white rounded-lg px-6 py-[18px]">View Property Details</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border rounded-xl p-10 border-[#262626]">
+            <div>
+              <img src="image/Home3.png" alt="Home 3">
+            </div>
+            <div>
+              <div class="mt-[30px]">
+                <p class="text-white font-semibold text-[24px] leading-[36px]">Rustic Retreat Cottage</p>
+              </div>
+  
+              <div class="mt-1.5">
+                <p class="font-medium text-lg text-[#999999]">An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...
+                <span class="font-medium text-lg text-white underline decoration-1">Read More</span></p>
+              </div>
+  
+              <div class="mt-[30px] flex gap-2.5">
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/bedroom.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">3-Bedroom</p>
+                    </div>
+                  </div>
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/bathroom.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">3-Bathroom</p>
+                    </div>
+                  </div>
+                  <div class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] py-2 px-3.5 gap-1">
+                    <div>
+                      <img src="image/villa.png" alt="icon">
+                    </div>
+                    <div>
+                      <p class="text-white font-medium text-lg">Villa</p>
+                    </div>
+                  </div>        
+              </div>
+  
+              <div class="mt-[30px] flex justify-between">
+                  <div class="">
+                    <p class="text-[#999999] font-medium text-lg">price</p>
+                    <p class="text-white font-semibold text-[24px] leading-[36px]">$555,000</p>
+                  </div>
+                  <div class="">
+                    <button class="bg-[#703BF7] text-white rounded-lg px-6 py-[18px]">View Property Details</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-[50px] border-t border-[#262626]">
+          <div>
+            <p class="text-white align-center font-medium text-[20px] leading-[30px]">01<span class="font-medium text-[20px] leading-[30px] text-[#999999]"> of 60</span></p>
+          </div>
+          <div class="flex mt-5 gap-2.5">
+            <div><img src="image/arrowleft.png" alt="leftarrow"></div>
+           <div><img src="image/arrowright.png" alt="rightarrow"></div>
+          </div>
+        </div>
+
+        <!-- third section -->
+      </div>
+  </main>
+
+  <script>
+    const sideBars = document.getElementById("side-bars");
+    const mobileMenu = document.getElementById("mobile");
+
+    sideBars.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>
