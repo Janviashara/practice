@@ -10,6 +10,25 @@
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+  .prevBtn, .nextBtn , .prevBtn1 , .nextBtn1 {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.prevBtn.active, .nextBtn.active , .prevBtn1.active , .nextBtn1.active {
+  background-color: #262626; /* Example highlight color (#262626) */
+  border-color: #262626;
+  color: white;
+}
+
+
+.prevBtn.inactive, .nextBtn.inactive  ,.prevBtn1.inactive , .nextBtn1.inactive{
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color:black; /* Default color for inactive buttons */
+  border-color:#262626;
+}
+
     @media (max-width:640px) {
       .carousel-item {
         flex: 0 0 100%;
@@ -264,20 +283,18 @@
         </div>
       </div>
 
-
-
       <!-- Carousel -->
       <div class="carousel-container mx-4">
-        <div class="overflow-auto">
+        <div class="overflow-hidden">
           <div
-            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px] gap-3 sm:mt-8  mt-10">
+            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px] gap-2.5 sm:gap-3 sm:mt-8  mt-10">
 
 
             <!-- First image -->
             <div
-              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
               <div>
-                <img src="image/HOme1.png" alt="Home image" class="" />
+                <img src="image/HOme1.png" alt="Home image" class="w-full h-auto object-cover" />
               </div>
               <div class="flex flex-col justify-between flex-grow">
                 <div class="2xl:mt-[30px] xl:mt-5 sm:mt-3 mt-4 flex-grow">
@@ -331,7 +348,7 @@
                   </div>
                 </div>
 
-                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex flex-wrap">
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
                   <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
                     <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
                     <p
@@ -341,7 +358,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-[54.5px] xl:py-3.5 xl:px-[47.67px] lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-[35px] font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
                       View Property Details
                     </button>
                   </div>
@@ -352,9 +369,9 @@
             <!-- second image -->
 
             <div
-              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border ">
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col  shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
               <div>
-                <img src="image/home2.png" alt="Home image" class="" />
+                <img src="image/home2.png" alt="Home image" class="w-full h-auto object-cover" />
               </div>
 
               <div class="flex flex-col justify-between flex-grow">
@@ -410,7 +427,7 @@
                   </div>
                 </div>
 
-                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex flex-wrap">
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
                   <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
                     <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
                     <p
@@ -420,7 +437,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-[54.5px] xl:py-3.5 xl:px-[47.67px] lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-[35px] font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
                       View Property Details
                     </button>
                   </div>
@@ -430,9 +447,9 @@
 
             <!-- third image-->
             <div
-              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col  shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border ">
               <div>
-                <img src="image/Home3.png" alt="Home image" class=" " />
+                <img src="image/Home3.png" alt="Home image" class="w-full h-auto object-cover" />
               </div>
 
               <div class="flex flex-col justify-between flex-grow">
@@ -445,8 +462,8 @@
 
                   <p
                     class="2xl:mt-1.5 xl:mt-1 sm:mt-1 mt-0.5 font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-[#999999] flex-grow">
-                    A chic and fully-furnished 2-bedroom apartment with panoramic city views...
-                    <span
+                    An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...
+                      <span
                       class="font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-white underline decoration-1">
                       Read More
                     </span>
@@ -489,9 +506,9 @@
                   </div>
                 </div>
 
-                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex flex-wrap">
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
                   <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
-                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs tetx-sm">price</p>
+                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
                     <p
                       class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-xs text-lg">
                       $555,000
@@ -499,7 +516,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-[54.5px] xl:py-3.5 xl:px-[47.67px] lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-[35px] font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
                       View Property Details
                     </button>
                   </div>
@@ -507,12 +524,11 @@
               </div>
             </div>
 
-
-            <!-- repeat third -->
+            <!-- 4-->
             <div
-              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border ">
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
               <div>
-                <img src="image/Home3.png" alt="Home image" class=" " />
+                <img src="image/Home3.png" alt="Home image" class="w-full h-auto object-cover" />
               </div>
 
               <div class="flex flex-col justify-between flex-grow">
@@ -525,8 +541,7 @@
 
                   <p
                     class="2xl:mt-1.5 xl:mt-1 sm:mt-1 mt-0.5 font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-[#999999] flex-grow">
-                    A chic and fully-furnished 2-bedroom apartment with panoramic city views...
-                    <span
+                    An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More                      <span
                       class="font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-white underline decoration-1">
                       Read More
                     </span>
@@ -569,9 +584,9 @@
                   </div>
                 </div>
 
-                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex flex-wrap">
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
                   <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
-                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs tetx-sm">price</p>
+                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
                     <p
                       class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-xs text-lg">
                       $555,000
@@ -579,7 +594,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-[54.5px] xl:py-3.5 xl:px-[47.67px] lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-[35px] font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
                       View Property Details
                     </button>
                   </div>
@@ -587,13 +602,11 @@
               </div>
             </div>
 
-
-            <!-- repeat image -->
-
+            <!-- 5 -->
             <div
-              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border ">
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
               <div>
-                <img src="image/home2.png" alt="Home image" class="" />
+                <img src="image/home2.png" alt="Home image" class="w-full h-auto object-cover" />
               </div>
 
               <div class="flex flex-col justify-between flex-grow">
@@ -649,7 +662,7 @@
                   </div>
                 </div>
 
-                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex  flex-wrap">
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
                   <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
                     <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
                     <p
@@ -659,13 +672,172 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-[54.5px] xl:py-3.5 xl:px-[47.67px] lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-[35px] font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
                       View Property Details
                     </button>
                   </div>
                 </div>
               </div>
             </div>
+
+
+            <!-- First image -->
+            <div
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
+              <div>
+                <img src="image/HOme1.png" alt="Home image" class="w-full h-auto object-cover" />
+              </div>
+              <div class="flex flex-col justify-between flex-grow">
+                <div class="2xl:mt-[30px] xl:mt-5 sm:mt-3 mt-4 flex-grow">
+                  <p
+                    class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg">
+                    Seaside Serenity Villa
+                  </p>
+
+                  <p
+                    class="2xl:mt-1.5 xl:mt-1 sm:mt-1 mt-0.5 font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-[#999999] flex-grow">
+                    A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...
+                    <span
+                      class="font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-white underline decoration-1">
+                      Read More
+                    </span>
+                  </p>
+                </div>
+
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex 2xl:gap-2.5 xl:gap-1.5 sm:gap-1 gap-1.5 flex-wrap">
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/bedroom.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs">
+                        4-Bedroom
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/bathroom.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs">3-Bathroom
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/villa.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs">
+                        Villa
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
+                  <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
+                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
+                    <p
+                      class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-xs text-lg">
+                      $555,000
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      View Property Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- second image -->
+
+            <div
+              class="carousel-item border rounded-xl border-[#262626] 2xl:p-10 xl:p-[30px] sm:p-4 p-5 flex flex-col  shrink-0 w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] box-border">
+              <div>
+                <img src="image/home2.png" alt="Home image" class="w-full h-auto object-cover" />
+              </div>
+
+              <div class="flex flex-col justify-between flex-grow">
+                <div class="2xl:mt-[30px] xl:mt-5 sm:mt-3 mt-4 flex-grow">
+                  <p
+                    class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg">
+                    Metropolitan Haven
+                  </p>
+
+                  <p
+                    class="2xl:mt-1.5 xl:mt-1 sm:mt-1 mt-0.5 font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-[#999999] flex-grow">
+                    A chic and fully-furnished 2-bedroom apartment with panoramic city views...
+                    <span
+                      class="font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm text-white underline decoration-1">
+                      Read More
+                    </span>
+                  </p>
+                </div>
+
+
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex 2xl:gap-2.5 xl:gap-1.5 sm:gap-1 gap-1.5 flex-wrap">
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/bedroom.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs">
+                        4-Bedroom
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/bathroom.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs"> 3-Bathroom
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex border border-[#262626] rounded-[28px] bg-[#1A1A1A] 2xl:py-2 2xl:px-3.5 xl:py-1.5 xl:px-3.5 sm:px-2.5 sm:py-1.5  py-1.5 px-[14px] 2xl:gap-1 gap-0.5">
+                    <div>
+                      <img src="image/villa.png" alt="icon" class="2xl:w-6 xl:w-5 sm:w-3 w-5" />
+                    </div>
+                    <div>
+                      <p class="text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs">
+                        Villa
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5  flex justify-between flex-wrap">
+                  <div class="2xl:mr-[50px] xl:mr-10 lg:mr-8 sm:mr-6 mr-[30px]">
+                    <p class="text-[#999999] font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm">price</p>
+                    <p
+                      class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-xs text-lg">
+                      $555,000
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-[#703BF7] text-white rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 lg:py-4 lg:px-2 sm:px-2 sm:py-1 py-3.5 px-5 font-medium 2xl:text-lg xl:text-sm lg:text-sm sm:text-[10px]">
+                      View Property Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+         
 
           </div>
         </div>
@@ -682,34 +854,37 @@
             <div class="flex mt-5 gap-2.5">
 
               <div><i
-                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
+                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
               <div><i
-                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
-              </div>
-            </div>
-          </div>
-          <div class="mx-4 sm:mx-0 mt-[30px] border-t border-[#262626] sm:hidden block">
-            <div class="carousel-item flex justify-between mt-4">
-              <div class="border rounded-lg border-[#262626] bg-[#1A1A1A] py-3.5 px-5">
-                <button class="text-white text-sm">View All Properties</button>
-              </div>
-              <div class="flex items-center gap-2.5">
-                <img src="image/arrowleft.png" alt="leftmove"
-                  class="prevBtn1 w-11 h-11 rounded-full hover:bg-zinc-700" />
-                <p class="text-white font-medium text-sm">
-                  01<span class="font-medium text-sm text-[#999999]"> of 60</span>
-                </p>
-                <img src="image/arrowright.png" alt="rightmove"
-                  class="nextBtn1 w-11 h-11 rounded-full hover:bg-zinc-700" />
+                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
             </div>
           </div>
         </div>
 
+          <div class="mt-[30px] border-t border-[#262626] sm:hidden block">
+            <div class="carousel-item flex justify-between mt-4">
+              <div class="border rounded-lg border-[#262626] bg-[#1A1A1A] py-3.5 px-5">
+                <button class="text-white text-sm">View All Properties</button>
+              </div>
+              <div class="flex items-center gap-2.5">
+                  <div><i
+                      class="fa-solid fa-arrow-left prevBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+                  </div>
+                <p class="text-white font-medium text-sm">
+                  01<span class="font-medium text-sm text-[#999999]"> of 60</span>
+                </p>
+                <div><i
+                  class="fa-solid fa-arrow-right nextBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+              </div>
+              </div>
+            </div>
+          </div>
+        
       </div>
-
     </div>
+
     <!-- third section -->
 
     <div class="bg-black 2xl:mx-[162px] xl:mx-20 sm:mx-16 ">
@@ -742,12 +917,13 @@
       </div>
 
       <div class="carousel-container mx-4">
-        <div class="overflow-auto">
+        <div class="overflow-hidden">
           <div
-            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px] gap-3  sm:mt-8  mt-10">
+            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px]   gap-2.5  sm:gap-3  sm:mt-8  mt-10">
             <!-- First Content -->
             <div
-              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+               w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex 2xl:gap-2.5 xl:gap-2 sm:gap-1 gap-2">
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
@@ -787,7 +963,8 @@
             <!-- Second Content -->
 
             <div
-              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex 2xl:gap-2.5 xl:gap-2 sm:gap-1 gap-2">
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
@@ -827,7 +1004,8 @@
             <!-- Third Content -->
 
             <div
-              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex 2xl:gap-2.5 xl:gap-2 sm:gap-1 gap-2">
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
@@ -867,7 +1045,8 @@
             <!-- repeat content -->
 
             <div
-              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)]  shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex 2xl:gap-2.5 xl:gap-2 sm:gap-1 gap-2">
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
                 <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
@@ -904,6 +1083,46 @@
               </div>
             </div>
 
+            <!-- repeat -->
+
+            <div
+            class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+            w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
+            <div class="flex 2xl:gap-2.5 xl:gap-2 sm:gap-1 gap-2">
+              <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
+              <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
+              <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
+              <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
+              <img src="image/star.png" alt="star" class="w-auto lg:h-9 sm:h-5 h-[30px]" />
+            </div>
+            <div class="2xl:mt-10 xl:mt-[30px] sm:mt-6 mt-6">
+              <p
+                class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-base text-lg">
+                Trusted Advisors
+              </p>
+            </div>
+            <div class="2xl:mt-3.5 xl:mt-2.5 sm:mt-1.5 mt-1.5 flex-grow">
+              <p class="text-white font-medium 2xl:text-lg xl:text-base sm:text-xs text-sm">
+                The Estatein team guided us through the entire buying process.
+                Their knowledge and commitment to our needs were impressive.
+                Thank you for your support!
+              </p>
+            </div>
+            <div class="2xl:mt-10 xl:mt-[30px] sm:mt-5 mt-6 flex 2xl:gap-3 xl:gap-2.5 sm:gap-1 gap-2.5">
+              <div>
+                <img src="image/person3.png" alt="person" class="xl:w-[50px] sm:w-[40px] w-[50px]" />
+              </div>
+              <div>
+                <p
+                  class="text-white font-medium 2xl:text-[20px] 2xl:leading-[30px] xl:text-lg md:text-sm sm:text-xs text-base">
+                  John Mans
+                </p>
+                <p class="font-medium 2xl:text-lg xl:text-base text-[#999999] sm:text-xs text-sm">
+                  USA, Nevada
+                </p>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
 
@@ -916,27 +1135,32 @@
               </p>
             </div>
             <div class="flex mt-5 gap-2.5">
+
               <div><i
-                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
+                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
               <div><i
-                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
+                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
             </div>
           </div>
         </div>
 
-        <div class=" mt-[30px] border-t border-[#262626] sm:hidden block">
-          <div class="flex justify-between mt-4">
+        <div class="mt-[30px] border-t border-[#262626] sm:hidden block">
+          <div class="carousel-item flex justify-between mt-4">
             <div class="border rounded-lg border-[#262626] bg-[#1A1A1A] py-3.5 px-5">
               <button class="text-white text-sm">View All Testimonials</button>
             </div>
             <div class="flex items-center gap-2.5">
-              <img src="image/arrowleft.png" alt="leftmove" class="prevBtn1 w-11 h-11" />
+                <div><i
+                    class="fa-solid fa-arrow-left prevBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+                </div>
               <p class="text-white font-medium text-sm">
                 01<span class="font-medium text-sm text-[#999999]"> of 10</span>
               </p>
-              <img src="image/arrowright.png" alt="rightmove" class="nextBtn1 w-11 h-11" />
+              <div><i
+                class="fa-solid fa-arrow-right nextBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+            </div>
             </div>
           </div>
         </div>
@@ -945,7 +1169,7 @@
 
     <!-- fourth section -->
 
-    <div class=" bg-black 2xl:mx-[162px] xl:mx-20 sm:mx-16">
+    <div class="bg-black 2xl:mx-[162px] xl:mx-20 sm:mx-16">
 
       <div class=" 2xl:mt-[110px] xl:mt-[90px] sm:mt-16 2xl:-ml-5 xl:-ml-2.5 mt-[61px]">
         <img src="image/spark.png" alt="spark" class="bg-black" />
@@ -975,13 +1199,14 @@
       </div>
 
       <div class="carousel-container mx-4">
-        <div class="overflow-auto">
+        <div class="overflow-hidden">
           <div
-            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px] gap-3  sm:mt-8  mt-10">
+            class="carousel flex transition-transform ease-in-out duration-300 2xl:mt-20 xl:mt-[60px]  gap-2.5 sm:gap-3 sm:mt-8 mt-10">
 
             <!-- first question -->
             <div
-              class="carousel-item border border-[#262626] sm:rounded-xl rounded-[10px] 2xl:p-[50px] xl:p-10 sm:p-6 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)] shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex-grow">
                 <p
                   class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg ">
@@ -1004,7 +1229,8 @@
             <!-- second question -->
 
             <div
-              class="carousel-item border border-[#262626] sm:rounded-xl rounded-[10px] 2xl:p-[50px] xl:p-10 sm:p-6 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)] shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex-grow">
                 <p
                   class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg ">
@@ -1026,15 +1252,15 @@
               </div>
             </div>
 
-
-
             <!-- third question -->
             <div
-              class="carousel-item border border-[#262626] sm:rounded-xl rounded-[10px] 2xl:p-[50px] xl:p-10 sm:p-6 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)] shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex-grow">
                 <p
-                  class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg">
-                  How can I contact an Estatein agent? </p>
+                  class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg ">
+                  How can I contact an Estatein agent?
+                </p>
               </div>
               <div class="2xl:mt-[30px] xl:mt-6 sm:mt-4 mt-5 flex-grow">
                 <p class="font-medium 2xl:text-lg xl:text-base xl:tracking-[-0.6px] sm:text-xs text-[#999999] text-sm">
@@ -1046,6 +1272,7 @@
                   class="border border-[#262626] bg-[#1A1A1A] rounded-[10px] rounded-lg 2xl:py-[18px] 2xl:px-6 xl:py-3.5 xl:px-5 sm:px-2 sm:py-2 py-3.5 px-5 w-full sm:w-auto text-white font-medium 2xl:text-[18px] 2xl:leading-[23px] text-[14px] leading-[18.34px]">
 
                   Read More
+
                 </button>
               </div>
             </div>
@@ -1053,7 +1280,8 @@
             <!-- repeat question -->
 
             <div
-              class="carousel-item border border-[#262626] sm:rounded-xl rounded-[10px] 2xl:p-[50px] xl:p-10 sm:p-6 p-5 flex flex-col sm:w-[calc(100%-10px)] md:w-[calc(33.33%-10px)] w-[calc(100%-10px)] shrink-0 box-border">
+              class="carousel-item border sm:rounded-lg rounded-[10px] border-[#262626] 2xl:p-[50px] xl:p-10 lg:p-6 sm:p-3 p-5 flex flex-col shrink-0 
+              w-[calc(100%-10px)] sm:w-[calc(33.33%-10px)] w-[calc(100%-10px)] box-border">
               <div class="flex-grow">
                 <p
                   class="text-white font-semibold 2xl:text-[24px] 2xl:leading-[36px] xl:text-[20px] xl:leading-[30px] sm:text-sm text-lg flex-grow">
@@ -1072,6 +1300,7 @@
                 </button>
               </div>
             </div>
+       
 
           </div>
         </div>
@@ -1084,27 +1313,32 @@
               </p>
             </div>
             <div class="flex mt-5 gap-2.5">
+
               <div><i
-                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
+                  class="fa-solid fa-arrow-left prevBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
               <div><i
-                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px] hover:bg-zinc-700"></i>
+                  class="fa-solid fa-arrow-right nextBtn 2xl:text-[30px] xl:text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
               </div>
             </div>
           </div>
         </div>
 
-        <div class=" mt-[30px] border-t border-[#262626] sm:hidden block">
-          <div class="flex justify-between mt-4">
+        <div class="mt-[30px] border-t border-[#262626] sm:hidden block">
+          <div class="carousel-item flex justify-between mt-4">
             <div class="border rounded-lg border-[#262626] bg-[#1A1A1A] py-3.5 px-5">
               <button class="text-white text-sm">View All FAQ’s</button>
             </div>
             <div class="flex items-center gap-2.5">
-              <img src="image/arrowleft.png" alt="leftmove" class="prevBtn1 w-11 h-11" />
+                <div><i
+                    class="fa-solid fa-arrow-left prevBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+                </div>
               <p class="text-white font-medium text-sm">
                 01<span class="font-medium text-sm text-[#999999]"> of 10</span>
               </p>
-              <img src="image/arrowright.png" alt="rightmove" class="nextBtn1 w-11 h-11" />
+              <div><i
+                class="fa-solid fa-arrow-right nextBtn1 2xl:text-[30px] xl:text-[24px] text-[24px] flex justify-center items-center text-white border border-[#262626] 2xl:px-3.5 2xl:py-[13px] px-2.5 py-[9px] rounded-[69px]"></i>
+            </div>
             </div>
           </div>
         </div>
@@ -1112,76 +1346,61 @@
     </div>
 
     <!-- fifth section -->
-
-    <!-- <div class="relative 2xl:mt-24 xl:mt-20 sm:mt-12 mt-20 border-y border-[#262626] flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        
-        <div class="order-1 sm:order-none z-0">
-          <img src="image/leftdesign.png" alt="map1" class="2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto  transform scale-y-[-1] sm:scale-y-100" />
-        </div>
-      
-        
-        <div class="absolute z-10 sm:z-0 flex flex-col sm:flex-row sm:items-start sm:text-left 2xl:px-[162px] 2xl:py-[100px] xl:px-20 xl:py-[60px] sm:py-14 sm:px-4 py-[50px] px-4 2xl:gap-[250px] xl:gap-[150px] md:gap-[150px] sm:gap-28">
-          <div class="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] xl:max-w-[979px] 2xl:max-w-[1154px]">
-            <p class="text-white font-semibold text-[28px] sm:text-xl md:text-2xl xl:text-[38px] 2xl:text-[48px] leading-[42px] xl:leading-[57px] 2xl:leading-[72px]">
-              Start Your Real Estate Journey Today
-            </p>
-            <p class="font-medium text-[#999999] text-sm sm:text-base xl:text-lg mt-1.5 sm:mt-2.5 2xl:mt-3.5">
-              Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
-            </p>
+     
+      <div class="max-w-[1920px] mx-auto">
+        <div
+          class="relative 2xl:mt-24 xl:mt-20 sm:mt-12 mt-20 border-y border-[#262626] flex flex-col sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="order-1 sm:order-none z-0">
+            <img
+              src="image/leftdesign.png"
+              alt="map1"
+              class="sm:-mb-0 2xl:-mb-6 2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto transform scale-y-[-1] sm:scale-y-100"
+            />
           </div>
-
-          <div class=" mt-[30px] sm:mt-10">
-          <button
-            class="bg-[#703BF7] rounded-[10px] 2xl:px-6 2xl:py-[18px] xl:py-3.5 xl:px-5 sm:py-5 sm:px-4 py-3.5 px-[122.5px] text-white font-medium 2xl:text-lg xl:text-xs sm:text-xs  text-sm">
-           
-              Explore Properties
-          </button>
-        </div>
-        </div>
-      
-        
-        <div class="order-2 sm:order-none flex  justify-end">
-          <img src="image/right.png" alt="map2" class="2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto" />
-        </div>
-      </div> -->
-
-    <div
-      class="relative 2xl:mt-24 xl:mt-20 sm:mt-12 mt-20 border-y border-[#262626] flex flex-col sm:flex-row sm:items-center sm:justify-between">
-
-      <div class=" order-1 sm:order-none z-0">
-        <img src="image/leftdesign.png" alt="map1"
-          class="2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto  transform scale-y-[-1] sm:scale-y-100" />
-      </div>
-
-
-      <div
-        class="absolute z-10 sm:z-0 flex flex-col sm:flex-row  2xl:px-[162px] 2xl:py-[100px] xl:px-20 xl:py-[60px] sm:py-14 sm:px-4 py-8 px-4 2xl:gap-[250px] xl:gap-[150px] md:gap-[100px] sm:gap-28">
-        <div class="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] xl:max-w-[979px] 2xl:max-w-[1154px]">
-          <p
-            class="text-white font-semibold text-[28px] sm:text-xl md:text-2xl xl:text-[38px] 2xl:text-[48px] leading-[42px] xl:leading-[57px] 2xl:leading-[72px]">
-            Start Your Real Estate Journey Today
-          </p>
-          <p class="font-medium text-[#999999] text-sm sm:text-base xl:text-lg mt-1.5 sm:mt-2.5 2xl:mt-3.5">
-            Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or
-            expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards
-            your real estate goals and explore our available properties or get in touch with our team for personalized
-            assistance.
-          </p>
-        </div>
-
-        <div class=" mt-[30px] sm:mt-10">
-          <button
-            class="bg-[#703BF7] rounded-[10px] 2xl:px-6 2xl:py-[18px] xl:py-3.5 xl:px-5 sm:py-5 sm:px-4 py-3.5 px-[122.5px] text-white font-medium 2xl:text-lg xl:text-xs sm:text-xs  text-sm">
-
-            Explore Properties
-          </button>
-        </div>
-      </div>
-
-      <div class="order-2 sm:order-none flex justify-end">
-        <img src="image/right.png" alt="map2" class="2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto" />
-      </div>
-    </div>
+  
+          <div
+            class="absolute z-10 sm:z-0 flex flex-col sm:flex-row 2xl:mx-[162px] 2xl:my-[100px] xl:mx-20 xl:my-[60px] md:my-12 md:mx-12 sm:mx-8 sm:my-6 mx-4 2xl:gap-[250px] xl:gap-[150px] lg:gap-[130px] md:gap-[100px] md:gap-36 sm:gap-20">
+            <div
+              class="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] xl:max-w-[979px] 2xl:max-w-[1154px]">
+              <p
+                class="text-white font-semibold text-[28px] sm:text-xl md:text-2xl xl:text-[38px] 2xl:text-[48px] leading-[42px] xl:leading-[57px] 2xl:leading-[72px]">
+                Start Your Real Estate Journey Today
+              </p>
+              <p
+                class="font-medium text-[#999999] text-sm xl:text-base 2xl:text-lg mt-1.5 sm:mt-2.5 2xl:mt-3.5">
+                Your dream property is just a click away. Whether you're looking
+                for a new home, a strategic investment, or expert real estate
+                advice, Estatein is here to assist you every step of the way. Take
+                the first step towards your real estate goals and explore our
+                available properties or get in touch with our team for
+                personalized assistance.                                                                                     
+              </p>
+            </div>
+  
+            <div class="sm:flex sm:items-center mt-[30px] ">
+               <!-- <button
+                class="bg-[#703BF7] rounded-[10px] 2xl:px-6 2xl:py-[18px] xl:py-3.5 xl:px-5 sm:py-5 sm:px-4 py-3.5 px-[122.5px] w-auto text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm ">
+                Explore Properties
+              </button>  -->
+            <button 
+              class="bg-[#703BF7] rounded-[10px]  w-full 2xl:py-[18px] sm:py-5 py-3.5 text-white font-medium 2xl:text-lg xl:text-sm sm:text-xs text-sm ">
+                Explore Properties
+  
+              </button>
+  
+            </div>
+          </div>
+  
+          <div class="order-2 sm:order-none flex justify-end">
+            <img
+              src="image/right.png"
+              alt="map2"
+              class="2xl:h-auto xl:h-[258px] sm:h-[200px] h-[150px] w-auto"
+            />
+          </div>
+        </div>   
+      </div> 
 
     <!-- six section -->
     <div class="2xl:mx-[162px] 2xl:my-[100px] xl:mx-20 xl:my-20 md:mx-14 md:my-14 sm:mx-12 sm:my-12 my-[50px] mx-4">
@@ -1334,50 +1553,111 @@
     sideBars.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   const carousels = document.querySelectorAll('.carousel-container');
+
+    //   carousels.forEach((container) => {
+    //     const carousel = container.querySelector('.carousel');
+    //     const prevBtns = container.querySelectorAll('.prevBtn, .prevBtn1');
+    //     const nextBtns = container.querySelectorAll('.nextBtn, .nextBtn1');
+    //     const slides = carousel.children;
+    //     const totalSlides = slides.length;
+
+    //     let currentIndex = 0;
+
+    //     const updateCarousel = () => {
+    //       const slideWidth = slides[0].clientWidth;
+    //       const visibleSlides = window.innerWidth <= 640 ? 1 : 3;
+    //       const maxIndex = totalSlides - visibleSlides;
+
+    //       currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+    //       const offset = currentIndex * (slideWidth + 12);
+    //       carousel.style.transform = `translateX(-${offset}px)`;
+    //     };
+
+    //     nextBtns.forEach((btn) =>
+    //       btn.addEventListener('click', () => {
+    //         currentIndex++;
+    //         updateCarousel();
+    //       })
+    //     );
+
+    //     prevBtns.forEach((btn) =>
+    //       btn.addEventListener('click', () => {
+    //         currentIndex--;
+    //         updateCarousel();
+    //       })
+    //     );
+
+    //     window.addEventListener('resize', updateCarousel);
+    //     updateCarousel();
+    //   });
+    // });
+
     document.addEventListener('DOMContentLoaded', () => {
-      const carousels = document.querySelectorAll('.carousel-container');
+  const carousels = document.querySelectorAll('.carousel-container');
 
-      carousels.forEach((container) => {
-        const carousel = container.querySelector('.carousel');
-        const prevBtns = container.querySelectorAll('.prevBtn, .prevBtn1');
-        const nextBtns = container.querySelectorAll('.nextBtn, .nextBtn1');
-        const slides = carousel.children;
-        const totalSlides = slides.length;
+  carousels.forEach((container) => {
+    const carousel = container.querySelector('.carousel');
+    const prevBtns = container.querySelectorAll('.prevBtn, .prevBtn1');
+    const nextBtns = container.querySelectorAll('.nextBtn, .nextBtn1');
+    const slides = carousel.children;
+    const totalSlides = slides.length;
 
-        let currentIndex = 0;
+    let currentIndex = 0;
 
-        const updateCarousel = () => {
-          const slideWidth = slides[0].clientWidth;
-          const visibleSlides = window.innerWidth <= 640 ? 1 : 3;
-          const maxIndex = totalSlides - visibleSlides;
+    const updateCarousel = () => {
+      const slideWidth = slides[0].clientWidth;
+      const visibleSlides = window.innerWidth <= 640 ? 1 : 3; 
+      const maxIndex = totalSlides - visibleSlides;
 
-          currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+      currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
 
-          const offset = currentIndex * (slideWidth + 12);
-          carousel.style.transform = `translateX(-${offset}px)`;
-        };
+      // Update the carousel's translation
+      const offset = currentIndex * (slideWidth + 12); // 12px gap between slides
+      carousel.style.transform = `translateX(-${offset}px)`;
 
-        nextBtns.forEach((btn) =>
-          btn.addEventListener('click', () => {
-            currentIndex++;
-            updateCarousel();
-          })
-        );
-
-        prevBtns.forEach((btn) =>
-          btn.addEventListener('click', () => {
-            currentIndex--;
-            updateCarousel();
-          })
-        );
-
-        window.addEventListener('resize', updateCarousel);
-        updateCarousel();
+      // Update arrow states and highlight active ones
+      prevBtns.forEach((btn) => {
+        if (currentIndex === 0) {
+          btn.classList.add('inactive');
+          btn.classList.remove('active');
+        } else {
+          btn.classList.add('active');
+          btn.classList.remove('inactive');
+        }
       });
-    });
 
+      nextBtns.forEach((btn) => {
+        if (currentIndex === maxIndex) {
+          btn.classList.add('inactive');
+          btn.classList.remove('active');
+        } else {
+          btn.classList.add('active');
+          btn.classList.remove('inactive');
+        }
+      });
+    };
 
+    nextBtns.forEach((btn) =>
+      btn.addEventListener('click', () => {
+        currentIndex++;
+        updateCarousel();
+      })
+    );
 
+    prevBtns.forEach((btn) =>
+      btn.addEventListener('click', () => {
+        currentIndex--;
+        updateCarousel();
+      })
+    );
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  });
+});
 
   </script>
 </body>
