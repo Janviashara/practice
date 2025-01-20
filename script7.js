@@ -5,12 +5,12 @@
 function isBalanced(equation) {
   let output = [];
   let Brackets = {
-    "{": "}",
-    ")": "(",
     "]": "[",
+    "}": "{",
+    ")": "(",
   };
 
-  for (let char of equation) {
+  for (const char of equation) {
     if (char === "(" || char === "{" || char === "[") {
       output.push(char);
     } else if (char === ")" || char === "}" || char === "]") {
@@ -22,4 +22,6 @@ function isBalanced(equation) {
   }
   return output.length === 0;
 }
-console.log(isBalanced("(a+b) * [c-d]"));
+console.log(isBalanced("(a+b) * {c-d}"));
+console.log(isBalanced("(a+b) * [(c-d)]"));
+console.log(isBalanced("(a+b) * {[c-d]}"));
